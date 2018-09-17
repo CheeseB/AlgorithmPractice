@@ -1,8 +1,10 @@
+//my first practice using github
+
 #include <studio.h>
 
 int main(){
 
-	printf("first practice");
+	printf("CheeseBall");
 	return 0;
 
 }
