@@ -12,7 +12,8 @@ public class BOJ1929 {
 
 	public static void main(String[] args) throws IOException {
 		
-		int m, n, yacsu, i, j;
+		int m, n, i, j;
+		boolean isSosu;
 //		Scanner scan = new Scanner(System.in);
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -24,16 +25,19 @@ public class BOJ1929 {
 		m = Integer.parseInt(st.nextToken());
 		n = Integer.parseInt(st.nextToken());
 		
+		if(m == 1) m++;
+		
 		for(i=m; i<=n; i++) {
 			
-			yacsu = 1;
-			for(j=1; j<=i/2; j++) {
+			isSosu = true;
+			for(j=2; j<=i/2; j++) {
 				if(i%j == 0) {
-					yacsu = j;
+					isSosu = false;
+					break;
 				}
 			}
-			if(yacsu == 1 && i != 1) {
-//				System.out.println(yacsu);
+			if(isSosu == true) {
+//				System.out.println(isSosu);
 				bw.write(i+"\n");
 				bw.flush();
 			}
