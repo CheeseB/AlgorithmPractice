@@ -1,6 +1,6 @@
 import sys
 
-sys.stdin = open("input.txt", "rt")
+# sys.stdin = open("input.txt", "rt")
 n, k = map(int, input().split())
 
 for i in range(1, n+1):
@@ -9,6 +9,5 @@ for i in range(1, n+1):
     if k == 0:
         print(i)
         break
-
-if k != 0:
+else:
     print(-1)
