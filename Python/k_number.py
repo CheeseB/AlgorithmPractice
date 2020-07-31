@@ -7,5 +7,4 @@ for i in range(t):
     list_part = num_list[s-1:e]
     list_part.sort()
 
-    print('#', i+1, sep='', end=' ')
-    print(list_part[k-1])
+    print("#%d %d" % (i+1, list_part[k-1]))
