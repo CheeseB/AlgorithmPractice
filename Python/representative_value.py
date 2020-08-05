@@ -3,7 +3,7 @@ scores = list(map(int, input().split()))
 
 min_sub = 101
 result_num = 0
-avg = round(sum(scores) / n)
+avg = int((sum(scores) / n) + 0.5)
 
 for num, score in enumerate(scores):
     sub = abs(score - avg)
