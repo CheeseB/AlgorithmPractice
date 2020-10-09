@@ -1,16 +1,18 @@
 tests = int(input())
 
-for test in range(1, tests + 1):
-    print('#' + str(test), end=' ')
+for test in range(tests):
     word = input().upper()
     length = len(word)
-    isPal = True
+
+    # 파이썬은 인덱스 접근을 거꾸로 음수로도 할 수 있음!
+    # -1이 맨 끝 인덱스, 숫자가 낮아질수록 앞 인덱스로 감
+    #  0  1  2  3  4
+    # |--|--|--|--|--|
+    #  -5 -4 -3 -2 -1
 
     for i in range(length // 2):
-        if word[i] != word[length - i - 1]:
-            isPal = False
-
-    if isPal:
-        print('YES')
+        if word[i] != word[-1-i]:
+            print('#%d NO' % (test + 1))
+            break
     else:
-        print('NO')
+        print('#%d YES' % (test + 1))
