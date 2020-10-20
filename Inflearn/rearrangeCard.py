@@ -9,4 +9,3 @@ for _ in range(10):
 cards.pop(0)
 for card in cards:
     print(card, end=' ')
-
