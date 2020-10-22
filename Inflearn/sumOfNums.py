@@ -12,9 +12,11 @@ while True:
             break
         tot += numList[rt]
         rt += 1
+    elif tot == m:
+        tot -= numList[lt]
+        lt += 1
+        cnt += 1
     else:
-        if tot == m:
-            cnt += 1
         tot -= numList[lt]
         lt += 1
 
