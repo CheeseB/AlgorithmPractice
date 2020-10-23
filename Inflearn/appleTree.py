@@ -1,19 +1,16 @@
 n = int(input())
-farm = [list(map(int, input().split())) for _ in range(n)]
-apple = 0
-harvCnt = 1
-start = n//2
+grid = [list(map(int, input().split())) for _ in range(n)]
+res = 0
+start = end = n//2
 
 for i in range(n):
-    harvest = start
-    for _ in range(harvCnt):
-        apple += farm[i][harvest]
-        harvest += 1
+    for j in range(start, end+1):
+        res += grid[i][j]
     if i < n//2:
-        harvCnt += 2
         start -= 1
+        end += 1
     else:
-        harvCnt -= 2
         start += 1
+        end -= 1
 
-print(apple)
+print(res)
