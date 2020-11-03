@@ -6,8 +6,11 @@ for i in range(7):
         # 2차원 리스트의 행 일부를 1차원 리스트로 슬라이스
         # j부터 j+5 전까지
         temp = grid[i][j:j+5]
+
+        # 행 검사 (리스트 거꾸로 뒤집기)
         if temp == temp[::-1]:
             res += 1
+        # 열 검사
         for k in range(2):
             if grid[j+k][i] != grid[j-k+4][i]:
                 break
