@@ -4,7 +4,7 @@ nums.sort()
 
 start = 0
 end = n
-while True:
+while start <= end:
     mid = (start + end) // 2
     if nums[mid] == m:
         print(mid + 1)
