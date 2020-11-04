@@ -1,4 +1,4 @@
-def suDoKu(board):
+def sudoku(board):
     for i in range(9):
         rowList = [0] * 10
         colList = [0] * 10
