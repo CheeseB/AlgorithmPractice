@@ -12,8 +12,8 @@ k, n = map(int, input().split())
 lanList = []
 for _ in range(k):
     lanList.append(int(input()))
-res = 1
-lt = 0
+res = 0
+lt = 1
 rt = max(lanList)
 
 while lt <= rt:
