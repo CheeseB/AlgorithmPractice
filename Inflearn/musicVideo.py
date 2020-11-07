@@ -12,13 +12,14 @@ def count(length):
 
 _, m = map(int, input().split())
 songs = list(map(int, input().split()))
+maxSong = max(songs)
 lt = 1
 rt = sum(songs)
 res = 0
 
 while lt <= rt:
     mid = (lt + rt) // 2
-    if count(mid) <= m:
+    if count(mid) <= m and mid >= maxSong:
         res = mid
         rt = mid - 1
     else:
