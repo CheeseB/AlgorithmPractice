@@ -1,13 +1,11 @@
 def count(length):
-    cnt = 0
+    cnt = 1
     tot = 0
     for song in songs:
         tot += song
         if tot > length:
             tot = song
             cnt += 1
-    else:
-        cnt += 1
 
     return cnt
 
