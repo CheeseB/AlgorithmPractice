@@ -21,4 +21,4 @@ def sudoku(board):
 
 
 inputBoard = [list(map(int, input().split())) for _ in range(9)]
-print(suDoKu(inputBoard))
+print(sudoku(inputBoard))
