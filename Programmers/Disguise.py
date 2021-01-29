@@ -1,6 +1,3 @@
-from itertools import combinations
-
-
 def solution(clothes):
     dic = {}
     for _, key in clothes:
@@ -9,16 +6,8 @@ def solution(clothes):
         else:
             dic[key] = 1
 
-    keyList = list(dic)
-    if all(x == 1 for x in dic.values()):
-        answer = 2 ** len(keyList) - 1
-    else:
-        answer = sum(dic.values())
-        for i in range(2, len(keyList) + 1):
-            for comb in list(combinations(keyList, i)):
-                mul = 1
-                for key in comb:
-                    mul *= dic[key]
-                answer += mul
+    answer = 1
+    for val in dic.values():
+        answer *= (val + 1)
 
-    return answer
+    return answer - 1
